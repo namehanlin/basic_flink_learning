@@ -5,10 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>basic_flink</groupId>
-  <artifactId>com.hanlin.basic</artifactId>
+  <artifactId>Basic_Flink</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>com.hanlin.basic</name>
+  <name>Flink Learning</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -16,6 +16,7 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
+    <flink.version>1.9.1</flink.version>
   </properties>
 
   <dependencies>
@@ -25,6 +26,31 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- Flink Core -->
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-java</artifactId>
+      <version>${flink.version}</version>
+      <!--<scope>provided</scope>-->
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-streaming-java_2.11</artifactId>
+      <version>${flink.version}</version>
+      <!--<scope>provided</scope>-->
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.flink</groupId>
+      <artifactId>flink-connector-kafka-0.10_2.11</artifactId>
+      <version>${flink.version}</version>
+    </dependency>
+
+
+
+
   </dependencies>
 
   <build>
